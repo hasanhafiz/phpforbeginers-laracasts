@@ -2,8 +2,13 @@
 
 const BASE_PATH = __DIR__ . '/../';
 
-require BASE_PATH . "functions.php";
-require base_path("Validator.php");
-require base_path("Database.php");
-require base_path("Response.php");
-require base_path("router.php");
+require BASE_PATH . "Core/functions.php";
+
+spl_autoload_register( function( $class ){
+    $class = str_ireplace('\\', '/', $class);
+    // dd( $result );
+    // var_dump( $class );
+    require base_path( "$class.php" );
+});
+
+require base_path("router.php"); 

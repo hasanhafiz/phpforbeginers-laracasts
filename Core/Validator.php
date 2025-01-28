@@ -1,5 +1,6 @@
 <?php 
 
+namespace Core;
 class Validator {
     public array $errors = [];
     public static function isEmpty( $value ) {

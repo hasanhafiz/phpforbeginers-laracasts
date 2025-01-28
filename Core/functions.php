@@ -1,5 +1,7 @@
 <?php 
 
+use Core\Response;
+
 function urlIs( string $url ): bool {
     $path = parse_url( $_SERVER["REQUEST_URI"] )['path'];
     return $path === $url;
