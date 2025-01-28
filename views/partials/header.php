@@ -7,10 +7,10 @@
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     
     <!-- Tailwind Offline CSS --> 
-    <link rel="stylesheet" href="css/tailwindcss/all-tailwind-classes-full-min.css">    
+    <link rel="stylesheet" href="/css/tailwindcss/all-tailwind-classes-full-min.css">    
     
     <title>Index</title>
 </head>
 
 <body class="h-full">
-    <div class="min-h-full">
+<div class="min-h-full">

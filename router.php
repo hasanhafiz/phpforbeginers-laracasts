@@ -9,7 +9,7 @@ function routeToController( $path, $routes ) {
         require $routes[$path];
     } else {
         abort();
-    }    
+    }
 }
 
 function abort( int $code = 404 ) {
