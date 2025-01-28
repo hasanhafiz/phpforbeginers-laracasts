@@ -6,8 +6,6 @@ require BASE_PATH . "Core/functions.php";
 
 spl_autoload_register( function( $class ){
     $class = str_ireplace('\\', '/', $class);
-    // dd( $result );
-    // var_dump( $class );
     require base_path( "$class.php" );
 });
 
