@@ -16,6 +16,7 @@ function dd( $data = null ) {
     echo "<pre>";
     print_r( $data );
     echo "</pre>";
+    exit;
 }
 
 function base_path( $path ) {
