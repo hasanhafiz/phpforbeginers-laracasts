@@ -1,6 +1,5 @@
 <?php 
 
-
 $errors = [];
 
 view("views/notes/create.view.php", [
