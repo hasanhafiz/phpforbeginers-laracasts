@@ -8,6 +8,10 @@
     
         <p><?= $note['body'] ?></p>
         
+        <p class="mt-4">
+            <a class="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/note/edit?id=<?= $note['id'] ?>">Edit</a>
+        </p>
+        
         <form action="" method="post" class="mt-6">
             <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="id" value="<?= $note['id'] ?>">
