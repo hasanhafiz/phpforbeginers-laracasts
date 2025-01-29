@@ -13,7 +13,7 @@ $note = $db->query($query, [':id' => $_GET['id']])->findOrFail();
 
 authorize( $note['user_id'] === $currentUserId );
 
-view("views/notes/show.view.php", [
-    'heading' => 'Note',
-    'note' => $note
-]);
+$db->query("DELETE FROM notes WHERE id = :id", [':id' => $_POST['id']]);
+
+header("Location: /notes");
+exit;
