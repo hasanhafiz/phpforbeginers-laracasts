@@ -19,6 +19,12 @@ function dd( $data = null ) {
     exit;
 }
 
+function dump( $data = null ) {
+    echo "<pre>";
+    print_r( $data );
+    echo "</pre>";
+}
+
 function base_path( $path ) {
     return BASE_PATH . $path;
 }
