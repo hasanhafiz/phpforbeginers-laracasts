@@ -7,7 +7,7 @@ class Validator {
         return empty( $value );
     }
     
-    public static function checkLength( $value, int $min = 3, int $max = 100 ) {
+    public static function validLength( $value, int $min = 3, int $max = 100 ) {
         $value = trim( $value );
         return ( strlen( $value ) >= $min ) && ( strlen( $value ) <= $max );
     }

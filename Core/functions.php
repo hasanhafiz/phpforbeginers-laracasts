@@ -40,3 +40,19 @@ function abort( int $code = 404 ) {
     die();
 }
 
+function login( $email ) {
+    $_SESSION['user'] = [ 'email' => $email ];
+    session_regenerate_id( true );
+}
+
+function logout() {
+    unset( $_SESSION['user'] );
+    session_destroy();
+    $params = session_get_cookie_params();
+    setcookie("PHPSESSID", "", time() -3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);        
+}
+
+function redirect( $path = '/' ) {
+    header("Location: {$path}");
+    exit();
+}

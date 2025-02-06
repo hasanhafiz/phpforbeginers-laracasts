@@ -8,7 +8,7 @@ $db = App::resolve(Database::class );
 
 $errors = [];
  
-if ( ! Validator::checkLength( $_POST['body'], 3, 100 ) ) {
+if ( ! Validator::validLength( $_POST['body'], 3, 100 ) ) {
     $errors['body'] = "Field must be between 3 and 20 characters";
 }
 

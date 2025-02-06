@@ -18,7 +18,7 @@ authorize( $note['user_id'] === $currentUserId );
 // check the form validation
 $errors = [];
 
-if ( ! Validator::checkLength( $_POST['body'], 3, 150 ) ) {
+if ( ! Validator::validLength( $_POST['body'], 3, 150 ) ) {
     $errors['body'] = "Field must be between 3 and 20 characters";
 }
 
